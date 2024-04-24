@@ -10,7 +10,7 @@ use crossterm::{
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
-use notes_cli::{get_handler, CrossTerminal, Event};
+use smart_notes_cli::{get_handler, CrossTerminal, Event};
 use tui::{backend::CrosstermBackend, Terminal};
 
 fn initialized_terminal() -> Result<CrossTerminal, Box<dyn std::error::Error>> {
