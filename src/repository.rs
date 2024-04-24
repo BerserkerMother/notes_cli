@@ -1,5 +1,5 @@
 use rusqlite::{self, params, Connection, Result};
-use std::path::Path;
+use std::{fmt::Display, path::Path};
 
 pub struct Repository {
     db: Connection,
@@ -83,5 +83,17 @@ pub struct Note {
 impl Note {
     pub fn new(id: Option<usize>, title: String, text: String) -> Note {
         Note { id, title, text }
+    }
+}
+
+impl From<Note> for String {
+    fn from(value: Note) -> Self {
+        format!("title: {}\n{}", value.title, value.text)
+    }
+}
+impl Display for Note {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        writeln!(f, "title: {}\n{}", self.title, self.text).unwrap();
+        Ok(())
     }
 }

@@ -16,3 +16,5 @@ tui = { version = "0.19", default-features = false, features = ['crossterm', 'se
 thiserror = "1.0"
 rusqlite = "0.31.0"
 tempfile = "3.10.1"
+serenity = "0.12.1"
+tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
