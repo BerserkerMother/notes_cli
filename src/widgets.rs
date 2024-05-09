@@ -39,13 +39,13 @@ impl Widget {
         }
     }
     pub fn render_copyright<'a>(&self) -> Paragraph<'a> {
-        let copyright = Paragraph::new("Ali Shokohi!")
+        let copyright = Paragraph::new("BerserkerMother")
             .style(Style::default().fg(Color::LightCyan))
             .alignment(Alignment::Center)
             .block(
                 Block::default()
                     .borders(Borders::ALL)
-                    .title("Koni")
+                    .title("Copyright")
                     .title_alignment(Alignment::Center)
                     .style(Style::default().fg(Color::LightCyan))
                     .border_type(BorderType::Plain),
